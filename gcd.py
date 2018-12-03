@@ -1,3 +1,4 @@
+#GCD is already included in math, use: import math from gcd
 #Program shows the remain number after a mod (%)
 def gcd(a, b):
 
