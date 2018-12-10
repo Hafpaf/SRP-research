@@ -43,7 +43,7 @@ counter = 0 #count times ran
 for i in gen_primes():
     if i < 1000000: #below 100k
         counter +=1
-        print("Prime number", counter, "is:", i)
+#        print("Prime number", counter, "is:", i)
     else:
         print("Stopping...")
         exit()
