@@ -53,4 +53,4 @@ for i in gen_primes():
 
 time_end=time.time()
 rounded_number = round(time_end-time_start, 3)
-print("Calculation took", rounded_number, "sek.") # print output
+print("Calculation took", rounded_number, "sec.") # print output
