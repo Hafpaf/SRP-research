@@ -2,7 +2,7 @@
 # Part of Code by David Eppstein, UC Irvine, 28 Feb 2002
 # https://code.activestate.com/recipes/117119/
 # https://stackoverflow.com/a/568618/
-
+import time
 def gen_primes():
     """
     Generate an infinite sequence of prime numbers.
@@ -39,6 +39,7 @@ def gen_primes():
         check_prime += 1
 
 counter = 0 #count times ran
+time_start=time.time()
 
 for i in gen_primes():
     if i < 1000000: #below 100k
@@ -46,4 +47,9 @@ for i in gen_primes():
 #        print("Prime number", counter, "is:", i)
     else:
         print("Stopping...")
-        exit()
+        print("Prime number", counter, "is:", i)
+        break
+
+time_end=time.time()
+rounded_number = round(time_end-time_start, 3)
+print("Calculation took", rounded_number, "sek.") # print output
