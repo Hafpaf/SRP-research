@@ -36,7 +36,12 @@ def gen_primes():
             del D[q]
 
         q += 1
+counter = 0 #count times ran
 
 for i in gen_primes():
     if i < 1000000: #below 100k
-        print(i)
+        counter +=1
+        print("Prime number", counter, "is:", i)
+    else:
+        print("Stopping...")
+        exit()
