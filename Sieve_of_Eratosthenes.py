@@ -11,31 +11,32 @@ def gen_primes():
     # indefinitely, but only as long as required by the current
     # number being tested.
     #
-    D = {}
+    known_prime = {}
 
     # The running integer that's checked for primeness
-    q = 2
+    check_prime = 2
 
     while True:
-        if q not in D:
-            # q is a new prime.
+        if check_prime not in known_prime:
+            # check_prime is a new prime.
             # Yield it and mark its first multiple that isn't
             # already marked in previous iterations
             #
-            yield q
-            D[q * q] = [q]
+            yield check_prime
+            known_prime[check_prime * check_prime] = [check_prime]
         else:
-            # q is composite. D[q] is the list of primes that
-            # divide it. Since we've reached q, we no longer
+            # check_prime is composite. known_prime[check_prime] is the list of primes that
+            # divide it. Since we've reached check_prime, we no longer
             # need it in the map, but we'll mark the next
             # multiples of its witnesses to prepare for larger
             # numbers
             #
-            for p in D[q]:
-                D.setdefault(p + q, []).append(p)
-            del D[q]
+            for p in known_prime[check_prime]:
+                known_prime.setdefault(p + check_prime, []).append(p)
+            del known_prime[check_prime]
 
-        q += 1
+        check_prime += 1
+
 counter = 0 #count times ran
 
 for i in gen_primes():
