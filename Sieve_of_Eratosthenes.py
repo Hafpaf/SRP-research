@@ -1,6 +1,7 @@
 # Sieve of Eratosthenes
 # Part of Code by David Eppstein, UC Irvine, 28 Feb 2002
-# http://code.activestate.com/recipes/117119/
+# https://code.activestate.com/recipes/117119/
+# https://stackoverflow.com/a/568618/
 
 def gen_primes():
     """ Generate an infinite sequence of prime numbers.
