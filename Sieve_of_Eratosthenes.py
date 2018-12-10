@@ -38,19 +38,22 @@ def gen_primes():
 
         check_prime += 1
 
+interval = 1000000 #100k
+
 counter = 0 #count times ran
 time_start=time.time()
 
 for i in gen_primes():
-    if i < 1000000: #below 100k
+    if i < interval: #<-- below this number
         counter +=1
 #        print("Prime number", counter, "is:", i)
         last_prime=i
     else:
-        print("Stopping...")
+        print("The last Prime number below",interval)
         print("Prime number", counter, "is:", last_prime)
         break
 
 time_end=time.time()
 rounded_number = round(time_end-time_start, 3)
+print("")
 print("Calculation took", rounded_number, "sec.") # print output
