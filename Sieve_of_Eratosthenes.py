@@ -45,9 +45,10 @@ for i in gen_primes():
     if i < 1000000: #below 100k
         counter +=1
 #        print("Prime number", counter, "is:", i)
+        last_prime=i
     else:
         print("Stopping...")
-        print("Prime number", counter, "is:", i)
+        print("Prime number", counter, "is:", last_prime)
         break
 
 time_end=time.time()
