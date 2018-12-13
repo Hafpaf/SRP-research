@@ -24,8 +24,8 @@ def gen_primes():
 
         check_prime += 1
 
-'''interval = 1000000 #100k
-
+interval = 1000000 #100k
+prime_list = []
 counter = 0 #count times ran
 time_start=time.time()
 
@@ -34,6 +34,7 @@ for i in gen_primes():
         counter +=1
 #        print("Prime number", counter, "is:", i)
         last_prime=i
+        prime_list.append(i)
     else:
         print("The last Prime number below",interval)
         print("Prime number", counter, "is:", last_prime)
