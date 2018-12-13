@@ -44,4 +44,18 @@ time_end=time.time()
 rounded_number = round(time_end-time_start, 3)
 print("")
 print("Calculation took", rounded_number, "sec.") # print output
-'''
+#print(prime_list)
+
+#https://stackoverflow.com/a/22808285/
+def prime_factors(n):
+    i = 2
+    factors = []
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+            factors.append(i)
+    if n > 1:
+        factors.append(n)
+    return factors
