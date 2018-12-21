@@ -2,7 +2,7 @@
 # Part of Code by David Eppstein, UC Irvine, 28 Feb 2002
 # https://code.activestate.com/recipes/117119/
 # https://stackoverflow.com/a/568618/
-import time
+'''import time
 def gen_primes():
     """
     Generate an infinite sequence of prime numbers.
@@ -44,9 +44,10 @@ time_end=time.time()
 rounded_number = round(time_end-time_start, 3)
 print("")
 print("Calculation took", rounded_number, "sec.") # print output
-#print(prime_list)
+#print(prime_list)'''
 
-#https://stackoverflow.com/a/22808285/
+#Part of code by stackoverflow.com/users/1209253/stefan and Will Ness
+#Build upon https://stackoverflow.com/a/22808285/
 def prime_factors(n):
     i = 2
     factors = []
@@ -59,3 +60,13 @@ def prime_factors(n):
     if n > 1:
         factors.append(n)
     return factors
+
+primes = prime_factors(int(input("Type number you wish to primefactorize: ",)))
+factorization_output = ""
+for i in range(len(primes)):
+    if i == 0:
+        factorization_output += str(primes[0])
+    else:
+        factorization_output += " * %s" % primes[i] #% is placeholder, % is also used as modulo in python#
+
+print(factorization_output)
