@@ -2,13 +2,13 @@
 #Part of code by stackoverflow.com/users/1209253/stefan and Will Ness, 4th April 2014
 #Build upon https://stackoverflow.com/a/22808285/
 def prime_factors(n):
-    i = 2
+    i = 2 #first prime number
     factors = [] #init empty list
     while i * i <= n: #while i times i is smaller or equal to n
-        if n % i:
-            i += 1
+        if n % i: #modulo opperator
+            i += 1 #check next number
         else:
-            n //= i
+            n //= i #integer division
             factors.append(i) #add i to list
     if n > 1:
         factors.append(n) #add n to list
