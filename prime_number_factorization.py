@@ -16,7 +16,7 @@ def prime_factors(n):
 
 #Check if non integer and throw error if not
 try:
-    primes = prime_factors(int(input("Type number you wish to primefactorize: ",)))
+    primes = prime_factors(int(input("Type number you wish to prime factorize: ",)))
 except ValueError as e:
     print("Not a number") #NaN
     exit()
@@ -28,4 +28,4 @@ for i in range(len(primes)):
     else:
         factorization_output += " * %s" % primes[i] #% is placeholder, % is also used as modulo in python
 
-print("Factorization:",factorization_output) #print result
+print("Prime factorization:" , factorization_output) #print result
