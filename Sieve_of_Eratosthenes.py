@@ -46,7 +46,7 @@ time_start=time.time()
 for i in gen_primes():
     if i < interval: #<-- below this number
         counter +=1
-#        print("Prime number", counter, "is:", i)
+#        print("Prime number", counter, "is:", i) #prit all outputs, comment to optimize 
         last_prime=i
     else:
         print("The last Prime number below",interval)

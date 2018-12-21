@@ -26,6 +26,6 @@ for i in range(len(primes)):
     if i == 0:
         factorization_output += str(primes[0]) #first number in list
     else:
-        factorization_output += " * %s" % primes[i] #% is placeholder, % is also used as modulo in python#
+        factorization_output += " * %s" % primes[i] #% is placeholder, % is also used as modulo in python
 
 print("Factorization:",factorization_output) #print result
